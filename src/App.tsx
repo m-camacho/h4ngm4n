@@ -1,33 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { TryAgainIcon } from "./assets/TryAgainIcon";
 import Drawing from "./Drawing";
 import Keyboard from "./Keyboard";
 import Word from "./Word";
-import words from "./wordList.json";
-
-const tryAgainIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 16 16"
-  >
-    <path
-      fill="currentColor"
-      fillRule="evenodd"
-      d="M12.75 8a4.5 4.5 0 0 1-8.61 1.834l-1.391.565A6.001 6.001 0 0 0 14.25 8A6 6 0 0 0 3.5 4.334V2.5H2v4l.75.75h3.5v-1.5H4.352A4.5 4.5 0 0 1 12.75 8z"
-      clipRule="evenodd"
-    />
-  </svg>
-);
-
-function getRandomWord(words: string[]) {
-  return words[Math.floor(Math.random() * words.length)];
-}
+import { getRandomWord } from "./words";
 
 export default function App() {
-  const [wordToGuess, setWordToGuess] = useState(getRandomWord(words));
+  const [wordToGuess, setWordToGuess] = useState(getRandomWord());
   const [playedLetters, setPlayedLetters] = useState<string[]>([]);
 
   const incorrectLetters = playedLetters.filter(
@@ -46,7 +26,7 @@ export default function App() {
   };
 
   const restartGame = () => {
-    setWordToGuess(getRandomWord(words));
+    setWordToGuess(getRandomWord());
     setPlayedLetters([]);
   };
 
@@ -70,7 +50,7 @@ export default function App() {
       />
 
       {(isWinner || isLoser) && (
-        <TryAgainButton onClick={restartGame}>{tryAgainIcon}</TryAgainButton>
+        <TryAgainButton onClick={restartGame}>{TryAgainIcon}</TryAgainButton>
       )}
 
       <Keyboard

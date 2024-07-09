@@ -118,7 +118,7 @@ const EndGame = styled.div`
   font-size: 1.3rem;
   font-weight: bold;
   color: ${(props: { isWinner: boolean }) =>
-    props.isWinner ? "#ffd900" : "black"};
+    props.isWinner ? "green" : "black"};
 
   @media (min-width: 768px) {
     font-size: 2rem;

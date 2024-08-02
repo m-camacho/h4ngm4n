@@ -8,6 +8,7 @@
     "caballo",
     "camello",
     "cocodrilo",
+    "comadreja",
     "conejo",
     "cordero",
     "dragon",
@@ -15,11 +16,13 @@
     "gato",
     "gavilan",
     "gorila",
+    "guacamayo",
     "hipopotamo",
     "iguana",
     "jirafa",
     "koala",
     "lagartija",
+    "llama",
     "mariposa",
     "nutria",
     "paloma",
@@ -31,9 +34,11 @@
     "sapo",
     "toro",
     "vaca",
+    "venado",
     "zorro"
   ],
   "fruits": [
+    "aguacate",
     "arandano",
     "banana",
     "cereza",
@@ -74,11 +79,15 @@
     "computadora",
     "escritorio",
     "impresora",
+    "lapiz",
     "mama",
     "mano",
     "martillo",
     "papa",
+    "puerta",
+    "ropero",
     "silla",
-    "telefono"
+    "telefono",
+    "tornillo"
   ]
 }

@@ -14,7 +14,7 @@ export default function Word({
   return (
     <Container>
       {wordToGuess.split("").map((letter, id) => (
-        <span key={id} className="border-b-2">
+        <span key={id} className="border-b-4 border-black">
           <Letter playedLetters={playedLetters} letter={letter} reveal={reveal}>
             {letter}
           </Letter>
@@ -54,5 +54,5 @@ const Letter = styled.span<LetterProps>`
   visibility: ${({ playedLetters, letter, reveal }) =>
     playedLetters.includes(letter) || reveal ? "visible" : "hidden"};
   color: ${({ playedLetters, letter, reveal }) =>
-    !playedLetters.includes(letter) && reveal ? "#d30000" : "black"};
+    !playedLetters.includes(letter) && reveal ? "red" : "black"};
 `;

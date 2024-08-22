@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Key, { VariantKey } from "./Key";
 import { KEYS } from "./constants";
+import Key, { VariantKey } from "./Key";
 
 interface KeyboardProps {
   correctLetters: string[];
